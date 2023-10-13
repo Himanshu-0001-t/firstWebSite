@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbacks coffee companey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar container">
+
+            <div class="nav-left-link">
+                <div class="logo">
+                    <img src="logo" alt="Starbacks" height="50">
+                </div>
+
+                <ul>
+                    <li>Menu</li>
+                    <li>Reward</li>
+                    <li>Gift card</li>
+                </ul>
+            </div>
+
+            <div class="nav-rigth-link">
+
+                <ul>
+                    <li>Find a store</li>
+                    <li><button class="outline">Sign in</button></li>
+                    <li><button class="btn"> Join now</button></li>
+                </ul>
+            </div>
+
+
+            <div class="hamburger" id="menu-btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="ham-menu">
+                <ul>
+                    <li>Menu</li>
+                    <li>Reward</li>
+                    <li>Gift card</li>
+                </ul>
+                <ul class="ham-down">
+                    <li><button class="outline">Sign in</button></li>
+                    <li><button class="btn">Join now</button></li>
+                </ul>
+
+                <span>Find a store</span>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="container main-baner">
+            <div class="imge"><img src="img1.jpg" alt="first img"></div>
+            <div class="text">
+                <h1>New apple in the bunch</h1>
+                <p>Introducing our Iced Apple Crisp Oatmilk Shaken Espresso with a perfectly balanced taste.</p>
+                <button class="outline">order now</button>
+            </div>
+        </section>
+
+        <section class="container main-baner">
+            <div class="text">
+                <h1>Good idea, chai lovers</h1>
+                <p>Try the new coffee-free Iced Pumpkin Cream Chai Tea Latte, inspired by our customers. It’s fall in a
+                    cup.</p>
+                <button class="outline">order now</button>
+            </div>
+            <div class="imge"><img src="img2.webp" alt="first img"></div>
+        </section>
+
+        <section class="container main-baner">
+            <div class="imge"><img src="img3.jpg" alt="first img"></div>
+            <div class="text">
+                <h1>Pastry fans, rejoice</h1>
+                <p>Say hello to the new Baked Apple Croissant filled with warm apple filling.
+                    Order now</p>
+                <button class="outline">order now</button>
+            </div>
+        </section>
+
+        <section class="baner container">
+            <div class="text">
+                <h2>Tap into your fall routine</h2>
+                <p>The Starbucks app makes pickup a breeze when you order ahead.</p>
+                <button class="outline">downlode now</button>
+            </div>
+            <div class="imge"><img src="img4.webp" alt=""></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-link container">
+
+            <div class="footer-box">
+                <h4>About Us</h4>
+                <ul>
+                    <li>our company</li>
+                    <li>our coffee</li>
+                    <li>stories and news</li>
+                    <li>Starbacks archive</li>
+                    <li>investor relations</li>
+                    <li>customers service</li>
+                    <li>contact us</li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h4>careers</h4>
+                <ul>
+                    <li>culture and Values</li>
+                    <li>Inclusion, Diversity, and Equity
+                    </li>
+                    <li>College Achievement plan</li>
+                    <li>Alumni Community
+                    </li>
+                    <li>U.S. Careers</li>
+                    <li>International Careers</li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h4>Social impact</h4>
+                <ul>
+                    <li>people</li>
+                    <li>plant</li>
+                    <li>Environmental and social impact repoeting</li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h4>For Business partners</h4>
+                <ul>
+                    <li>Landlord support center </li>
+                    <li>Suppliers</li>
+                    <li>Corporate Gift Card sales</li>
+                    <li>Office and foodservice coffee</li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h4>Order and pick up</h4>
+                <ul>
+                    <li>order on the app</li>
+                    <li>order on the web</li>
+                    <li>delvery</li>
+                    <li>order and pick up options</li>
+                    <li>Explore and find coffee for home</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-icon container">
+            <div class="icon">
+                <span>Spotify</span>
+                <span>Facebook</span>
+                <span>p</span>
+                <span>instagram</span>
+                <span>youtube</span>
+                <span>twiter</span>
+            </div>
+
+            <div class="notice">
+                <span>Privacy Notice</span>
+                |
+                <span>Terms of Use</span>
+                |
+                <span>Do Not Share My Personal Information</span>
+                |
+                <span>CA Supply Chain Act</span>
+                |
+                <span>Cookie Preferences</span>
+            </div>
+            <p>© 2023 Starbucks Coffee Company. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <script>
+
+        let btn = document.getElementById("menu-btn")
+        let menu = document.querySelector(".ham-menu")
+        menu.style.display = "none"
+
+        let footerMenu = document.querySelectorAll(".footer-box")
+
+        Array.from(footerMenu)
+
+        footerMenu.forEach((l) => {
+            l.addEventListener("click", () => {
+
+                l.classList.toggle("open")
+            })
+        })
+
+        btn.addEventListener("click", () => {
+
+            if (menu.style.display == "block") {
+                menu.style.display = "none"
+
+            } else {
+                menu.style.display = "block"
+
+            }
+
+        })
+    </script>
+</body>
+
+</html>
